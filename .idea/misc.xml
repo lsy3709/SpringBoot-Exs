@@ -8,6 +8,7 @@
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/ch4-test/ch4-test3/pom.xml" />
+        <option value="$PROJECT_DIR$/ch7_8-test/ch7_8_test/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
@@ -16,6 +17,7 @@
         <option value="$PROJECT_DIR$/ch2-test/ch2-test/pom.xml" />
         <option value="$PROJECT_DIR$/ch4-test/ch4-test/pom.xml" />
         <option value="$PROJECT_DIR$/ch4-test/ch4-test2/pom.xml" />
+        <option value="$PROJECT_DIR$/ch4-test/ch4-test3/pom.xml" />
       </set>
     </option>
   </component>

@@ -22,6 +22,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
+        //앱, 통신 테스트 용으로 잠시 끄기
+        http.csrf().disable();
         http.formLogin()
                 .loginPage("/members/login")
                 .defaultSuccessUrl("/")
@@ -36,7 +38,10 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         http.authorizeRequests()
                 .mvcMatchers("/", "/members/**", "/item/**", "/images/**").permitAll()
                 .mvcMatchers("/admin/**").hasRole("ADMIN")
-                .anyRequest().authenticated()
+                // 웹에서는 인증시
+//                .anyRequest().authenticated()
+                // 앱에서 통신만 확인용으로 사용.
+                .anyRequest().permitAll()
         ;
 
         http.exceptionHandling()
